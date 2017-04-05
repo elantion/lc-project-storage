@@ -12,6 +12,7 @@ let projectStorage = new ProjectStorage({
 });
 projectStorage.value = ['1', '2']; //easily store data
 projectStorage.value = {a: 'b'}; //change it whenever you want
+console.log(projectStorage.value); //easily get value from localStorage
 projectStorage.value = undefined; //cleaning data is simple
 ```
 
