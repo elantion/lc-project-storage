@@ -1,0 +1,25 @@
+{
+  "name": "lc-project-storage",
+  "version": "1.0.0",
+  "description": "A project storage base on localStorage.",
+  "main": "ProjectStorage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazycoffee/lc-project-storage.git"
+  },
+  "keywords": [
+    "localStorage"
+  ],
+  "author": "JamesYin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lazycoffee/lc-project-storage/issues"
+  },
+  "homepage": "https://github.com/lazycoffee/lc-project-storage#readme",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  }
+}
