@@ -8,8 +8,8 @@
     "declaration": true
   },
   "include": [
-    "./**.ts",
-    "./interface/**.ts"
+    "./*.ts",
+    "./interface/*.ts"
   ],
   "exclude": [
     "./node_modules"

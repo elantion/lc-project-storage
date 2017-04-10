@@ -3,13 +3,15 @@ import OPTIONS from './interface/OPTIONS';
 export default class ProjectStorage{
     constructor(args:OPTIONS){
         this._projectName = args.projectName;
+        this._version = args.version || 1;
         this._cleanDateAfter = args.cleanDateAfter || 24*60*60*1000;
         this._project = <PROJECT>JSON.parse(window.localStorage.getItem(this._projectName));
         this._defaultProject = {
             name: this._projectName,
             cleanDataAfter: this._cleanDateAfter,
             value: undefined,
-            useTime:Date.now()
+            useTime:Date.now(),
+            version: this._version
         };
         if(!this._project){
             this._project = this._defaultProject;
@@ -19,13 +21,18 @@ export default class ProjectStorage{
             }else if(this._project.useTime + this._project.cleanDataAfter < Date.now()){
                 //clean out date value
                 this._project.value = undefined;
+            }else if(!this._project.version || this._project.version < this._version){
+                //purge data when version update
+                this._project.value = undefined;
             }
             this._project.useTime = Date.now();
         }
+        this._project.version = this._version;
         window.localStorage.setItem(this._projectName, JSON.stringify(this._project));
     }
     private _project:PROJECT;
     private _projectName:string;
+    private _version:number;
     private _cleanDateAfter:number;
     private _defaultProject:PROJECT;
     get value(){

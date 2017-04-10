@@ -3,5 +3,6 @@ interface PROJECT {
     value: any;
     useTime: number;
     cleanDataAfter: number;
+    version: number;
 }
 export default PROJECT;
