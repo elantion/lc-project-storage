@@ -1,6 +1,6 @@
 import PROJECT from './interface/PROJECT';
 import OPTIONS from './interface/OPTIONS';
-export default class ProjectStorage{
+class ProjectStorage{
     constructor(args:OPTIONS){
         this._projectName = args.projectName;
         this._version = args.version || 1;
@@ -47,3 +47,4 @@ export default class ProjectStorage{
         //question: is this over boundary?
     }
 }
+export = ProjectStorage;

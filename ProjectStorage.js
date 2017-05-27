@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var ProjectStorage = (function () {
     function ProjectStorage(args) {
         this._projectName = args.projectName;
@@ -50,4 +49,4 @@ var ProjectStorage = (function () {
     };
     return ProjectStorage;
 }());
-exports.default = ProjectStorage;
+module.exports = ProjectStorage;

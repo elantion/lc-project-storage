@@ -1,5 +1,5 @@
 import OPTIONS from './interface/OPTIONS';
-export default class ProjectStorage {
+declare class ProjectStorage {
     constructor(args: OPTIONS);
     private _project;
     private _projectName;
@@ -9,3 +9,4 @@ export default class ProjectStorage {
     value: any;
     cleanOutDateProjects(): void;
 }
+export = ProjectStorage;
