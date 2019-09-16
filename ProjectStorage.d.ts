@@ -9,4 +9,4 @@ declare class ProjectStorage {
     value: any;
     cleanOutDateProjects(): void;
 }
-export = ProjectStorage;
+export default ProjectStorage;

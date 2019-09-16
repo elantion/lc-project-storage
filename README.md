@@ -6,15 +6,17 @@ Data stored in localStorage can be last forever until user clean browser data. T
 
 ```typescript
 import ProjectStorage = require('lc-project-storage');
-let projectStorage = new ProjectStorage({
+const projectStorage = new ProjectStorage({
     projectName: 'LazyCoffee', //give an awesome name
-    cleanDataAfter: 3600*24*7 //a week, default is 3600*24
+    cleanDataAfter: 3600*24*7, //a week, default is 3600*24
+    version: 1, // it will clean your data when you update this version number
 });
+// just set value, it will automatic save into localStorage
 projectStorage.value = ['1', '2']; //easily store data
 projectStorage.value = {a: 'b'}; //change it whenever you want
 console.log(projectStorage.value); //easily get value from localStorage
 projectStorage.value = undefined; //cleaning data is simple
 ```
-
+Only tested in TypeScript.
 ## License
 MIT

@@ -5,7 +5,7 @@ class ProjectStorage{
         this._projectName = args.projectName;
         this._version = args.version || 1;
         this._cleanDateAfter = args.cleanDateAfter || 24*60*60*1000;
-        this._project = <PROJECT>JSON.parse(window.localStorage.getItem(this._projectName));
+        this._project = <PROJECT>JSON.parse(window.localStorage.getItem(this._projectName) || '');
         this._defaultProject = {
             name: this._projectName,
             cleanDataAfter: this._cleanDateAfter,
@@ -47,4 +47,4 @@ class ProjectStorage{
         //question: is this over boundary?
     }
 }
-export = ProjectStorage;
+export default ProjectStorage;

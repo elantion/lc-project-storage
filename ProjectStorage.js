@@ -1,10 +1,11 @@
 "use strict";
-var ProjectStorage = (function () {
+Object.defineProperty(exports, "__esModule", { value: true });
+var ProjectStorage = /** @class */ (function () {
     function ProjectStorage(args) {
         this._projectName = args.projectName;
         this._version = args.version || 1;
         this._cleanDateAfter = args.cleanDateAfter || 24 * 60 * 60 * 1000;
-        this._project = JSON.parse(window.localStorage.getItem(this._projectName));
+        this._project = JSON.parse(window.localStorage.getItem(this._projectName) || '');
         this._defaultProject = {
             name: this._projectName,
             cleanDataAfter: this._cleanDateAfter,
@@ -49,4 +50,4 @@ var ProjectStorage = (function () {
     };
     return ProjectStorage;
 }());
-module.exports = ProjectStorage;
+exports.default = ProjectStorage;
