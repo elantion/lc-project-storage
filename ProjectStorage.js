@@ -5,7 +5,7 @@ var ProjectStorage = /** @class */ (function () {
         this._projectName = args.projectName;
         this._version = args.version || 1;
         this._cleanDateAfter = args.cleanDateAfter || 24 * 60 * 60 * 1000;
-        this._project = JSON.parse(window.localStorage.getItem(this._projectName) || '');
+        this._project = JSON.parse(window.localStorage.getItem(this._projectName) || 'null');
         this._defaultProject = {
             name: this._projectName,
             cleanDataAfter: this._cleanDateAfter,
