@@ -1,6 +1,6 @@
 {
     "name": "lc-project-storage",
-    "version": "1.0.7",
+    "version": "1.0.11",
     "description": "A project storage base on localStorage.",
     "main": "ProjectStorage.js",
     "typings": "ProjectStorage",
